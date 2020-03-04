@@ -22,10 +22,9 @@ Then it should display the data on the screen
      */
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        final int SQUARE_FEET_OF_WALL_SPACE = 115;
         final int ONE_GALLON_OF_PAINT_PER_HOUR = 8;
         final double HOUR_OF_LABER = 18.00;
-        int numberOfSquareFeet = 0;
+        double numberOfSquareFeet = 0.00;
 
         System.out.println("Please enter the number of rooms");
         int numberOfRooms = keyboard.nextInt();
@@ -33,7 +32,7 @@ Then it should display the data on the screen
         while (numberOfRooms > 0) {
             System.out.println("how many square feet is in room " + numberOfRooms);
 
-            int numberOfSquareFeetEntered = keyboard.nextInt();
+            double numberOfSquareFeetEntered = keyboard.nextDouble();
 
             numberOfSquareFeet = numberOfSquareFeet + numberOfSquareFeetEntered;
             numberOfRooms = numberOfRooms - 1;
@@ -41,12 +40,24 @@ Then it should display the data on the screen
         System.out.println("Please enter the price of paint per gallon");
         double priceOfPainPerGallon = keyboard.nextDouble();
         //output  number of gallons of paint required
+        double outputOfPaint = numberOfGallonsOfPaint(numberOfSquareFeet);
+        System.out.println("You need "+outputOfPaint+ "gallons of paint ");
         // output The hours of labor required
         //output The cost of the paint
         //output The labor charges
         //output The total cost of the paint job
     }
-    
+    public static double numberOfGallonsOfPaint(double numberOfSquareFeet){
+         int gallonsOfPaint=0;
+       do {
+         gallonsOfPaint=gallonsOfPaint+1;
+         numberOfSquareFeet=numberOfSquareFeet-115;
+        } while (numberOfSquareFeet > 0);
+         
+         
+        
+                return gallonsOfPaint;
+    }
     
     
     
