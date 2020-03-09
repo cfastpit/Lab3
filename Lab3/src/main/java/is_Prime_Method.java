@@ -10,18 +10,18 @@ public class is_Prime_Method {
         boolean output = testPrime(testPrime);
 
         System.out.println(output);
-       if(output=true){
-           System.out.println("this is not prime");
+       if(output==true){
+           System.out.println(testPrime+" is is prime");
        }
-        if(output=false){
-           System.out.println("this is rime");
+        if(output==false){
+           System.out.println(testPrime+"is not prime");
        }
     }
 
     public static boolean testPrime(int testprime) {
         boolean testPrimeNumber = false;
         int test = 1;
-        for (int x = testprime - 1; x > 1; x--) {
+        for (int x = testprime - 1; x > 2; x--) {
             test = testprime % x;
             if (test == 0) {
                 testPrimeNumber = false;
