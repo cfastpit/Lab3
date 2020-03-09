@@ -9,12 +9,12 @@ public class is_Prime_Method {
         int testPrime = keyboard.nextInt();
         boolean output = testPrime(testPrime);
 
-        System.out.println(output);
+        
        if(output==true){
            System.out.println(testPrime+" is is prime");
        }
         if(output==false){
-           System.out.println(testPrime+"is not prime");
+           System.out.println(testPrime+" is not prime");
        }
     }
 
@@ -31,8 +31,6 @@ public class is_Prime_Method {
                 testPrimeNumber = true;
             }
         }
-
-//mod or %
         return testPrimeNumber;
     }
 }
